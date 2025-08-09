@@ -1,10 +1,12 @@
-#include <stdio.h>
+#include<stdio.h>
 int main(){
-    int valor;
-    float mutiplicaçao;
-    printf("informe seu salario:");
-    scanf("%4d", &valor);
-    mutiplicaçao = valor * 1.01;
-    printf("o valor reajustado do seu salario em :%4lf", mutiplicaçao);
+    int idade;
+    int anos;
+    anos = 365;
+    printf("infome a sua idade :");
+    scanf("%d", & idade);
+    int resulto = idade * anos ;
+    printf("voce ja viviu em dias %d", resulto);
     return 0;
+    
 }

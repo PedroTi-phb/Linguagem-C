@@ -1,11 +1,11 @@
 #include<stdio.h>
 int main(){
-    char v1, v2;
-    printf("informe o primeiro caracter:\n");
-    scanf("%c", &v1);
-    printf("informe o segundo caractere:\n");
-    scanf(" %c", &v2);
-    printf("%c %c \n", v1,v2);
-    return 0;
 
+    double valor;
+    double porc;
+    printf("informe um numero:");
+    scanf("%lf", &valor);
+    porc = valor * 0.04;
+    printf("resultado de 4 porcento do valor: %.2lf", porc);
+    return 0;
 }

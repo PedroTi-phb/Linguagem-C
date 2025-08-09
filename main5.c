@@ -1,17 +1,14 @@
 #include<stdio.h>
-int main ( ){
-    int a;
-    int b;
-    int c;
-    int x;
-    printf("digite o valor de a:\n");
-    scanf("%d", &a);
-    printf("digite o valor de b:\n");
-    scanf("%d", &b);
-    printf("digite valor de c:\n");
-    scanf("%d", &c);
-    x = 2 * ((a - c) / 8) -b * 5;
-    printf("o resultado da conta de x %d\n", x);
+main(){
+    int v1, v2, v3;
+    printf("informe um numero :");
+    scanf("%d", &v1);
+    printf("informe um numero :");
+    scanf("%d", &v2);
+    printf("informe um numero :");
+    scanf("%d", &v3);
+    int media = ( v1 + v2 + v3) / 2;
+    printf("resultado da media das notas:  %d", media);
     return 0;
-
+  
 }

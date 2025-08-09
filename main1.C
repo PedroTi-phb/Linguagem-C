@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main (){
+int mais (){
     double raio, perimetro, area, pi = 3.14159;
    
 
