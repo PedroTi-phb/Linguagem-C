@@ -1,37 +1,51 @@
 #include <stdio.h>
 
-int main(void) {
-    int i, num, maior, menor, soma = 0;
-    float media;
+int main() {
+    int opcao;
+    int a, b;
+    int resultado;
 
-    // Primeiro número (inicializa maior, menor e soma)
-    printf("Informe o primeiro numero: ");
-    scanf("%d", &num);
+    do {
+        printf("\n=== CALCULADORA ===\n");
+        printf("1 - Multiplicar\n");
+        printf("2 - Somar\n");
+        printf("3 - Subtrair\n");
+        printf("4 - Dividir\n");
+        printf("5 - Sair\n");
+        printf("Escolha uma opcao: ");
 
-    maior = num;
-    menor = num;
-    soma  = num;
+        scanf("%d", &opcao);           // <-- LÊ A OPÇÃO (fundamental!)
 
-    // Lê os outros 9 números
-    for (i = 2; i <= 10; i++) {
-        printf("Informe um valor positivo e inteiro: ");
-        scanf("%d", &num);
-
-        soma += num;
-
-        if (num > maior) {
-            maior = num;
+        if (opcao >= 1 && opcao <= 4) {
+            printf("Digite o primeiro valor: ");
+            scanf("%d", &a);
+            printf("Digite o segundo valor: ");
+            scanf("%d", &b);
         }
-        if (num < menor) {            // < para atualizar o menor
-            menor = num;
+
+        if (opcao == 1) {
+            resultado = a * b;
+            printf("Resultado: %d\n", resultado);
+        } else if (opcao == 2) {
+            resultado = a + b;
+            printf("Resultado: %d\n", resultado);
+        } else if (opcao == 3) {
+            resultado = a - b;
+            printf("Resultado: %d\n", resultado);
+        } else if (opcao == 4) {
+            if (b == 0) {
+                printf("Erro: divisao por zero!\n");
+            } else {
+                resultado = a / b;       // divisao inteira
+                printf("Resultado: %d\n", resultado);
+            }
+        } else if (opcao == 5) {
+            printf("Encerrando programa\n");  // <-- agora com ';'
+        } else {
+            printf("Opcao invalida\n");
         }
-    }
 
-    media = soma / 10.0f;             // divisão real
-
-    printf("\nO maior numero é %d\n", maior);
-    printf("O menor numero é %d\n", menor);
-    printf("A media dos numeros informados é %.2f\n", media);
+    } while (opcao != 5);               // para quando o usuario digitar 5
 
     return 0;
 }
